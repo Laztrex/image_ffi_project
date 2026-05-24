@@ -1,0 +1,1214 @@
+    Blocking waiting for file lock on Cargo.lock file
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   0.103249625s  INFO prepare_target{force=false package_id=blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin) target="blur_plugin"}: cargo::core::compiler::fingerprint: fingerprint error for blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("blur_plugin", ["cdylib"], "/Users/laztrex/RustProjects/image_ffi_project/blur_plugin/src/lib.rs", Edition2021) }
+   0.103262542s  INFO prepare_target{force=false package_id=blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin) target="blur_plugin"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/blur_plugin-d9f6e77b4a8ffdca/lib-blur_plugin`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.105202333s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs", Edition2021) }
+   0.105208500s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/serde-2208f8f099be29c8/lib-serde`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.105376125s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/build.rs", Edition2021) }
+   0.105379000s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/serde-f7820387e22cc7ff/run-build-script-build-script-build`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::custom_build::build_work
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.105621708s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint: fingerprint error for serde_derive v1.0.228/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("serde_derive", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_derive-1.0.228/src/lib.rs", Edition2021) }
+   0.105625583s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/serde_derive-822530523e6034d2/lib-serde_derive`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.106106000s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint: fingerprint error for syn v2.0.117/Build/TargetInner { ..: lib_target("syn", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/syn-2.0.117/src/lib.rs", Edition2021) }
+   0.106109125s  INFO prepare_target{force=false package_id=syn v2.0.117 target="syn"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/syn-b33e50d441233ce0/lib-syn`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.106250417s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.150/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.150/src/lib.rs", Edition2021) }
+   0.106253125s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/serde_json-5461f52dc21a07b1/lib-serde_json`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.106492542s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.150/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.150/build.rs", Edition2021) }
+   0.106498417s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/serde_json-738fc181e0d2fd3c/run-build-script-build-script-build`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::custom_build::build_work
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.106591042s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint error for zmij v1.0.21/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.21/src/lib.rs", Edition2021) }
+   0.106593875s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/zmij-2d3f8199cf809bb9/lib-zmij`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.106718250s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zmij v1.0.21/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.21/build.rs", Edition2021) }
+   0.106720625s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/zmij-3f388d1711f78f3d/run-build-script-build-script-build`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::custom_build::build_work
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.106881083s  INFO prepare_target{force=false package_id=blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin) target="blur_plugin"}: cargo::core::compiler::fingerprint: fingerprint error for blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("blur_plugin", ["cdylib"], "/Users/laztrex/RustProjects/image_ffi_project/blur_plugin/src/lib.rs", Edition2021) }
+   0.106884333s  INFO prepare_target{force=false package_id=blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin) target="blur_plugin"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/blur_plugin-fef0e39f8082ec6f/test-lib-blur_plugin`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.110683042s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint: fingerprint error for image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("image_processor", ["lib"], "/Users/laztrex/RustProjects/image_ffi_project/image_processor/src/lib.rs", Edition2021) }
+   0.110687167s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/image_processor-851217118ac4c852/lib-image_processor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.111084667s  INFO prepare_target{force=false package_id=clap v4.6.1 target="clap"}: cargo::core::compiler::fingerprint: fingerprint error for clap v4.6.1/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap-4.6.1/src/lib.rs", Edition2024) }
+   0.111087917s  INFO prepare_target{force=false package_id=clap v4.6.1 target="clap"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/clap-e4c2040f7661bcbd/lib-clap`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.111223625s  INFO prepare_target{force=false package_id=clap_builder v4.6.0 target="clap_builder"}: cargo::core::compiler::fingerprint: fingerprint error for clap_builder v4.6.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("clap_builder", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.0/src/lib.rs", Edition2024) }
+   0.111226500s  INFO prepare_target{force=false package_id=clap_builder v4.6.0 target="clap_builder"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/clap_builder-04c040ab8ef7b215/lib-clap_builder`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.111672792s  INFO prepare_target{force=false package_id=clap_derive v4.6.1 target="clap_derive"}: cargo::core::compiler::fingerprint: fingerprint error for clap_derive v4.6.1/Build/TargetInner { benched: false, for_host: true, proc_macro: true, ..: lib_target("clap_derive", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_derive-4.6.1/src/lib.rs", Edition2024) }
+   0.111675833s  INFO prepare_target{force=false package_id=clap_derive v4.6.1 target="clap_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/clap_derive-ea3190811c61b37d/lib-clap_derive`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.111841167s  INFO prepare_target{force=false package_id=env_logger v0.11.10 target="env_logger"}: cargo::core::compiler::fingerprint: fingerprint error for env_logger v0.11.10/Check { test: false }/TargetInner { ..: lib_target("env_logger", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.10/src/lib.rs", Edition2021) }
+   0.111843750s  INFO prepare_target{force=false package_id=env_logger v0.11.10 target="env_logger"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/env_logger-82d4be419ecfd5e3/lib-env_logger`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.112195042s  INFO prepare_target{force=false package_id=jiff v0.2.24 target="jiff"}: cargo::core::compiler::fingerprint: fingerprint error for jiff v0.2.24/Check { test: false }/TargetInner { ..: lib_target("jiff", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jiff-0.2.24/src/lib.rs", Edition2021) }
+   0.112197833s  INFO prepare_target{force=false package_id=jiff v0.2.24 target="jiff"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/jiff-6f67c2c4ca3933b3/lib-jiff`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.112315917s  INFO prepare_target{force=false package_id=image v0.25.10 target="image"}: cargo::core::compiler::fingerprint: fingerprint error for image v0.25.10/Check { test: false }/TargetInner { ..: lib_target("image", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/image-0.25.10/src/lib.rs", Edition2021) }
+   0.112320458s  INFO prepare_target{force=false package_id=image v0.25.10 target="image"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/image-25d8865c97d1c6c4/lib-image`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.112750542s  INFO prepare_target{force=false package_id=exr v1.74.0 target="exr"}: cargo::core::compiler::fingerprint: fingerprint error for exr v1.74.0/Check { test: false }/TargetInner { ..: lib_target("exr", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/exr-1.74.0/src/lib.rs", Edition2018) }
+   0.112754458s  INFO prepare_target{force=false package_id=exr v1.74.0 target="exr"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/exr-cf482b571e218f11/lib-exr`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.112965292s  INFO prepare_target{force=false package_id=half v2.7.1 target="half"}: cargo::core::compiler::fingerprint: fingerprint error for half v2.7.1/Check { test: false }/TargetInner { ..: lib_target("half", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/half-2.7.1/src/lib.rs", Edition2021) }
+   0.112967792s  INFO prepare_target{force=false package_id=half v2.7.1 target="half"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/half-f60506dcd4afdc83/lib-half`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.113107417s  INFO prepare_target{force=false package_id=zerocopy v0.8.48 target="zerocopy"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.48/Check { test: false }/TargetInner { ..: lib_target("zerocopy", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerocopy-0.8.48/src/lib.rs", Edition2021) }
+   0.113110083s  INFO prepare_target{force=false package_id=zerocopy v0.8.48 target="zerocopy"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/zerocopy-b624655f083d3cb6/lib-zerocopy`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.113338000s  INFO prepare_target{force=false package_id=zerocopy-derive v0.8.48 target="zerocopy_derive"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy-derive v0.8.48/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("zerocopy_derive", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerocopy-derive-0.8.48/src/lib.rs", Edition2021) }
+   0.113341250s  INFO prepare_target{force=false package_id=zerocopy-derive v0.8.48 target="zerocopy_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/zerocopy-derive-021d40086a10d534/lib-zerocopy_derive`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.114046167s  INFO prepare_target{force=false package_id=moxcms v0.8.1 target="moxcms"}: cargo::core::compiler::fingerprint: fingerprint error for moxcms v0.8.1/Check { test: false }/TargetInner { ..: lib_target("moxcms", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/moxcms-0.8.1/src/lib.rs", Edition2024) }
+   0.114048875s  INFO prepare_target{force=false package_id=moxcms v0.8.1 target="moxcms"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/moxcms-6c8d093134733505/lib-moxcms`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.114315750s  INFO prepare_target{force=false package_id=pxfm v0.1.29 target="pxfm"}: cargo::core::compiler::fingerprint: fingerprint error for pxfm v0.1.29/Check { test: false }/TargetInner { ..: lib_target("pxfm", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pxfm-0.1.29/src/lib.rs", Edition2024) }
+   0.114320125s  INFO prepare_target{force=false package_id=pxfm v0.1.29 target="pxfm"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/pxfm-be9516b69f5bd429/lib-pxfm`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.114672750s  INFO prepare_target{force=false package_id=ravif v0.13.0 target="ravif"}: cargo::core::compiler::fingerprint: fingerprint error for ravif v0.13.0/Check { test: false }/TargetInner { ..: lib_target("ravif", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ravif-0.13.0/src/lib.rs", Edition2024) }
+   0.114677083s  INFO prepare_target{force=false package_id=ravif v0.13.0 target="ravif"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/ravif-d23ba581db4ed8ba/lib-ravif`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.115011583s  INFO prepare_target{force=false package_id=rav1e v0.8.1 target="rav1e"}: cargo::core::compiler::fingerprint: fingerprint error for rav1e v0.8.1/Check { test: false }/TargetInner { benched: false, ..: lib_target("rav1e", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rav1e-0.8.1/src/lib.rs", Edition2021) }
+   0.115015458s  INFO prepare_target{force=false package_id=rav1e v0.8.1 target="rav1e"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/rav1e-790c68491e3123dd/lib-rav1e`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.115427417s  INFO prepare_target{force=false package_id=aligned-vec v0.6.4 target="aligned_vec"}: cargo::core::compiler::fingerprint: fingerprint error for aligned-vec v0.6.4/Check { test: false }/TargetInner { ..: lib_target("aligned_vec", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aligned-vec-0.6.4/src/lib.rs", Edition2021) }
+   0.115430500s  INFO prepare_target{force=false package_id=aligned-vec v0.6.4 target="aligned_vec"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/aligned-vec-0b1a84f1c866a287/lib-aligned_vec`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.115531958s  INFO prepare_target{force=false package_id=equator v0.4.2 target="equator"}: cargo::core::compiler::fingerprint: fingerprint error for equator v0.4.2/Check { test: false }/TargetInner { ..: lib_target("equator", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/equator-0.4.2/src/lib.rs", Edition2021) }
+   0.115534625s  INFO prepare_target{force=false package_id=equator v0.4.2 target="equator"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/equator-1afa4f63d9515a97/lib-equator`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.115632208s  INFO prepare_target{force=false package_id=equator-macro v0.4.2 target="equator_macro"}: cargo::core::compiler::fingerprint: fingerprint error for equator-macro v0.4.2/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("equator_macro", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/equator-macro-0.4.2/src/lib.rs", Edition2021) }
+   0.115635083s  INFO prepare_target{force=false package_id=equator-macro v0.4.2 target="equator_macro"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/equator-macro-12c9ad51e22ff9ba/lib-equator_macro`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.115770875s  INFO prepare_target{force=false package_id=arg_enum_proc_macro v0.3.4 target="arg_enum_proc_macro"}: cargo::core::compiler::fingerprint: fingerprint error for arg_enum_proc_macro v0.3.4/Build/TargetInner { name_inferred: true, tested: false, for_host: true, proc_macro: true, ..: lib_target("arg_enum_proc_macro", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/arg_enum_proc_macro-0.3.4/src/lib.rs", Edition2018) }
+   0.115774500s  INFO prepare_target{force=false package_id=arg_enum_proc_macro v0.3.4 target="arg_enum_proc_macro"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/arg_enum_proc_macro-b742f9e817ddf233/lib-arg_enum_proc_macro`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.115912417s  INFO prepare_target{force=false package_id=av-scenechange v0.14.1 target="av_scenechange"}: cargo::core::compiler::fingerprint: fingerprint error for av-scenechange v0.14.1/Check { test: false }/TargetInner { ..: lib_target("av_scenechange", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/av-scenechange-0.14.1/src/lib.rs", Edition2021) }
+   0.115915292s  INFO prepare_target{force=false package_id=av-scenechange v0.14.1 target="av_scenechange"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/av-scenechange-7579a55a1453abfe/lib-av_scenechange`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.116705208s  INFO prepare_target{force=false package_id=thiserror v2.0.18 target="thiserror"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror v2.0.18/Check { test: false }/TargetInner { ..: lib_target("thiserror", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs", Edition2021) }
+   0.116708583s  INFO prepare_target{force=false package_id=thiserror v2.0.18 target="thiserror"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/thiserror-916431067aace4b2/lib-thiserror`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.116936208s  INFO prepare_target{force=false package_id=thiserror-impl v2.0.18 target="thiserror_impl"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror-impl v2.0.18/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("thiserror_impl", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-impl-2.0.18/src/lib.rs", Edition2021) }
+   0.116939125s  INFO prepare_target{force=false package_id=thiserror-impl v2.0.18 target="thiserror_impl"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/thiserror-impl-0fd574ac11582c1d/lib-thiserror_impl`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.117101333s  INFO prepare_target{force=false package_id=v_frame v0.3.9 target="v_frame"}: cargo::core::compiler::fingerprint: fingerprint error for v_frame v0.3.9/Check { test: false }/TargetInner { ..: lib_target("v_frame", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/lib.rs", Edition2021) }
+   0.117103875s  INFO prepare_target{force=false package_id=v_frame v0.3.9 target="v_frame"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/v_frame-12f4c1153b5c3447/lib-v_frame`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.117273625s  INFO prepare_target{force=false package_id=av1-grain v0.2.5 target="av1_grain"}: cargo::core::compiler::fingerprint: fingerprint error for av1-grain v0.2.5/Check { test: false }/TargetInner { ..: lib_target("av1_grain", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/av1-grain-0.2.5/src/lib.rs", Edition2021) }
+   0.117276417s  INFO prepare_target{force=false package_id=av1-grain v0.2.5 target="av1_grain"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/av1-grain-8e01ae1164d063df/lib-av1_grain`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.117887875s  INFO prepare_target{force=false package_id=num-derive v0.4.2 target="num_derive"}: cargo::core::compiler::fingerprint: fingerprint error for num-derive v0.4.2/Build/TargetInner { tested: false, for_host: true, proc_macro: true, ..: lib_target("num_derive", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-derive-0.4.2/src/lib.rs", Edition2021) }
+   0.117896000s  INFO prepare_target{force=false package_id=num-derive v0.4.2 target="num_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/num-derive-52f502a809c693d9/lib-num_derive`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.118185167s  INFO prepare_target{force=false package_id=profiling v1.0.18 target="profiling"}: cargo::core::compiler::fingerprint: fingerprint error for profiling v1.0.18/Check { test: false }/TargetInner { ..: lib_target("profiling", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/profiling-1.0.18/src/lib.rs", Edition2018) }
+   0.118190125s  INFO prepare_target{force=false package_id=profiling v1.0.18 target="profiling"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/profiling-4ae3223dc5d56814/lib-profiling`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.118301208s  INFO prepare_target{force=false package_id=profiling-procmacros v1.0.18 target="profiling_procmacros"}: cargo::core::compiler::fingerprint: fingerprint error for profiling-procmacros v1.0.18/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("profiling_procmacros", ["proc-macro"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/profiling-procmacros-1.0.18/src/lib.rs", Edition2018) }
+   0.118305958s  INFO prepare_target{force=false package_id=profiling-procmacros v1.0.18 target="profiling_procmacros"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/profiling-procmacros-f93ddf37df30005c/lib-profiling_procmacros`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.118471417s  INFO prepare_target{force=false package_id=rav1e v0.8.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for rav1e v0.8.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rav1e-0.8.1/build.rs", Edition2021) }
+   0.118475167s  INFO prepare_target{force=false package_id=rav1e v0.8.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/rav1e-f33e28d5972048f7/run-build-script-build-script-build`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::custom_build::build_work
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.118678292s  INFO prepare_target{force=false package_id=tiff v0.11.3 target="tiff"}: cargo::core::compiler::fingerprint: fingerprint error for tiff v0.11.3/Check { test: false }/TargetInner { ..: lib_target("tiff", ["lib"], "/Users/laztrex/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiff-0.11.3/src/lib.rs", Edition2021) }
+   0.118682750s  INFO prepare_target{force=false package_id=tiff v0.11.3 target="tiff"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/tiff-dcca76a91723c131/lib-tiff`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.119031958s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint: fingerprint error for image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("image_processor", ["lib"], "/Users/laztrex/RustProjects/image_ffi_project/image_processor/src/lib.rs", Edition2021) }
+   0.119037333s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/image_processor-6b390c6b036ffe6b/test-lib-image_processor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.119332625s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint: fingerprint error for image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor)/Check { test: false }/TargetInner { name: "image_processor", doc: true, ..: with_path("/Users/laztrex/RustProjects/image_ffi_project/image_processor/src/main.rs", Edition2021) }
+   0.119336958s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/image_processor-8949d108d3b96615/bin-image_processor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.119610125s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint: fingerprint error for image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor)/Check { test: true }/TargetInner { name: "image_processor", doc: true, ..: with_path("/Users/laztrex/RustProjects/image_ffi_project/image_processor/src/main.rs", Edition2021) }
+   0.119614125s  INFO prepare_target{force=false package_id=image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor) target="image_processor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/image_processor-53f976bbce372615/test-bin-image_processor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.119880750s  INFO prepare_target{force=false package_id=mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin) target="mirror_plugin"}: cargo::core::compiler::fingerprint: fingerprint error for mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("mirror_plugin", ["cdylib"], "/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin/src/lib.rs", Edition2021) }
+   0.119884958s  INFO prepare_target{force=false package_id=mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin) target="mirror_plugin"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/mirror_plugin-1d763c4b087cd63d/lib-mirror_plugin`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.119995208s  INFO prepare_target{force=false package_id=mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin) target="mirror_plugin"}: cargo::core::compiler::fingerprint: fingerprint error for mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("mirror_plugin", ["cdylib"], "/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin/src/lib.rs", Edition2021) }
+   0.119999208s  INFO prepare_target{force=false package_id=mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin) target="mirror_plugin"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/laztrex/RustProjects/image_ffi_project/target/debug/.fingerprint/mirror_plugin-2b1224370748e5a3/test-lib-mirror_plugin`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   Compiling zmij v1.0.21
+   Compiling serde v1.0.228
+   Compiling syn v2.0.117
+   Compiling serde_json v1.0.150
+   Compiling rav1e v0.8.1
+    Checking pxfm v0.1.29
+    Checking clap_builder v4.6.0
+    Checking jiff v0.2.24
+    Checking moxcms v0.8.1
+    Checking env_logger v0.11.10
+   Compiling equator-macro v0.4.2
+   Compiling zerocopy-derive v0.8.48
+   Compiling thiserror-impl v2.0.18
+   Compiling serde_derive v1.0.228
+   Compiling profiling-procmacros v1.0.18
+   Compiling arg_enum_proc_macro v0.3.4
+   Compiling num-derive v0.4.2
+   Compiling clap_derive v4.6.1
+    Checking profiling v1.0.18
+    Checking equator v0.4.2
+    Checking thiserror v2.0.18
+    Checking zerocopy v0.8.48
+    Checking clap v4.6.1
+    Checking aligned-vec v0.6.4
+    Checking v_frame v0.3.9
+    Checking av1-grain v0.2.5
+    Checking av-scenechange v0.14.1
+    Checking blur_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/blur_plugin)
+    Checking mirror_plugin v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/mirror_plugin)
+    Checking half v2.7.1
+    Checking tiff v0.11.3
+    Checking exr v1.74.0
+    Checking ravif v0.13.0
+    Checking image v0.25.10
+    Checking image_processor v0.1.0 (/Users/laztrex/RustProjects/image_ffi_project/image_processor)
+error: could not compile `image_processor` (lib test) due to 1 previous error; 3 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `image_processor` (lib) due to 1 previous error; 3 warnings emitted
