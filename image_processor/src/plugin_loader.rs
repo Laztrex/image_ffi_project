@@ -59,9 +59,7 @@ impl Plugin {
         let params_c = CString::new(params).map_err(|e| {
             crate::error::AppError::ParamParse(format!("params contain null byte: {}", e))
         })?;
-        let ret = unsafe {
-            (self.process_fn)(width, height, data.as_mut_ptr(), params_c.as_ptr())
-        };
+        let ret = unsafe { (self.process_fn)(width, height, data.as_mut_ptr(), params_c.as_ptr()) };
         if ret != 0 {
             return Err(crate::error::AppError::PluginLoad(format!(
                 "Plugin returned error code {}",
