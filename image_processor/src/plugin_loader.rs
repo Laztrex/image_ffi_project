@@ -1,5 +1,6 @@
 use crate::error::Result;
 use libloading::{Library, Symbol};
+use std::env::consts::DLL_EXTENSION;
 use std::ffi::CString;
 use std::path::Path;
 
@@ -8,7 +9,7 @@ type ProcessImageFn = unsafe extern "C" fn(
     height: u32,
     data: *mut u8,
     params: *const std::os::raw::c_char,
-);
+) -> i32;
 type ApiVersionFn = unsafe extern "C" fn() -> u32;
 
 const EXPECTED_API_VERSION: u32 = 1;
@@ -37,7 +38,7 @@ impl Plugin {
                         "Plugin does not export plugin_api_version".into(),
                     )
                 })?;
-            let version = version_fn(); // вызываем Symbol напрямую
+            let version = version_fn();
             if version != EXPECTED_API_VERSION {
                 return Err(crate::error::AppError::PluginLoad(format!(
                     "Unsupported plugin API version: {}. Expected {}",
@@ -46,7 +47,7 @@ impl Plugin {
             }
 
             let process_fn: Symbol<ProcessImageFn> = lib.get(b"process_image")?;
-            let process_fn_ptr = *process_fn; // разыменование допустимо для ProcessImageFn (Copy)
+            let process_fn_ptr = *process_fn;
             Ok(Plugin {
                 _lib: lib,
                 process_fn: process_fn_ptr,
@@ -58,24 +59,23 @@ impl Plugin {
         let params_c = CString::new(params).map_err(|e| {
             crate::error::AppError::ParamParse(format!("params contain null byte: {}", e))
         })?;
-        unsafe {
-            (self.process_fn)(width, height, data.as_mut_ptr(), params_c.as_ptr());
+        let ret = unsafe { (self.process_fn)(width, height, data.as_mut_ptr(), params_c.as_ptr()) };
+        if ret != 0 {
+            return Err(crate::error::AppError::PluginLoad(format!(
+                "Plugin returned error code {}",
+                ret
+            )));
         }
         Ok(())
     }
 
-    #[cfg(target_os = "linux")]
-    fn lib_filename(name: &str) -> String {
-        format!("lib{}.so", name)
-    }
-
+    // Платформозависимое имя библиотеки (с учётом префикса `lib` на Unix)
     #[cfg(target_os = "windows")]
     fn lib_filename(name: &str) -> String {
-        format!("{}.dll", name)
+        format!("{}.{}", name, DLL_EXTENSION)
     }
-
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "linux", target_os = "macos"))]
     fn lib_filename(name: &str) -> String {
-        format!("lib{}.dylib", name)
+        format!("lib{}.{}", name, DLL_EXTENSION)
     }
 }

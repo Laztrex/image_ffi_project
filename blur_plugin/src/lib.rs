@@ -14,16 +14,27 @@ pub extern "C" fn plugin_api_version() -> u32 {
     1
 }
 
-/// Размывает изображение без лишних копий (использует временный буфер).
+/// Размывает изображение.
+///
 /// # Safety
-/// `rgba_data` должен указывать на валидный буфер размером не менее `width * height * 4`.
+/// - `rgba_data` должен указывать на валидный буфер размером не менее `width * height * 4` байт.
+/// - Буфер должен быть выровнен и не пересекаться с другими данными.
+/// - `width` и `height` должны соответствовать реальному размеру изображения.
+/// - `params` – валидный null‑terminated UTF-8 C-строковый указатель (может быть NULL, что интерпретируется как "{}").
+///
+/// Возвращает 0 при успехе, ненулевое значение при ошибке.
 #[no_mangle]
 pub unsafe extern "C" fn process_image(
     width: u32,
     height: u32,
     rgba_data: *mut u8,
     params: *const std::os::raw::c_char,
-) {
+) -> i32 {
+    if rgba_data.is_null() {
+        warn!("process_image: null pointer to rgba_data");
+        return 1;
+    }
+
     let len = match (width as usize)
         .checked_mul(height as usize)
         .and_then(|p| p.checked_mul(4))
@@ -31,13 +42,23 @@ pub unsafe extern "C" fn process_image(
         Some(l) => l,
         None => {
             warn!("Buffer size overflow: {}x{}x4", width, height);
-            return;
+            return 2;
         }
     };
 
     let data = unsafe { slice::from_raw_parts_mut(rgba_data, len) };
 
-    let params_str = unsafe { CStr::from_ptr(params).to_str().unwrap_or("{}") };
+    let params_str = if params.is_null() {
+        "{}"
+    } else {
+        match unsafe { CStr::from_ptr(params).to_str() } {
+            Ok(s) => s,
+            Err(_) => {
+                warn!("Invalid UTF-8 in params string");
+                "{}"
+            }
+        }
+    };
 
     let blur_params: BlurParams = match serde_json::from_str(params_str) {
         Ok(p) => p,
@@ -60,34 +81,55 @@ pub unsafe extern "C" fn process_image(
         blur_pass(data, &mut temp, w, h, radius);
         data.copy_from_slice(&temp);
     }
+
+    0
 }
 
+/// Выполняет один проход размытия изображения: каждый пиксель заменяется средним арифметическим
+/// всех пикселей в квадрате радиуса `radius` (включительно).
+///
+/// # Args
+/// * `src` – исходный RGBA буфер (только чтение).
+/// * `dst` – целевой RGBA буфер (запись).
+/// * `width` – ширина изображения в пикселях.
+/// * `height` – высота изображения в пикселях.
+/// * `radius` – радиус размытия (размер ядра = 2*radius+1). Если `radius == 0`, функция копирует пиксели без изменений.
+///
+/// # Notes
+/// - Функция обрабатывает края изображения: окрестность обрезается по границам, поэтому возле краёв среднее
+///   считается по меньшему количеству пикселей.
+/// - Для предотвращения переполнения знаковых типов все координаты внутри функции приводятся к `i64`.
+///
+/// # Panics
+/// Функция не паникует, но может вызвать panic, если `src` или `dst` имеют недостаточную длину
+/// (что является ошибкой вызывающего кода).
 pub fn blur_pass(src: &[u8], dst: &mut [u8], width: usize, height: usize, radius: usize) {
     const BYTES_PER_PIXEL: usize = 4;
+    let width_i64 = width as i64;
+    let height_i64 = height as i64;
+    let radius_i64 = radius as i64;
 
     for y in 0..height {
+        let y_i64 = y as i64;
         for x in 0..width {
+            let x_i64 = x as i64;
+
             let mut sum_r = 0u32;
             let mut sum_g = 0u32;
             let mut sum_b = 0u32;
             let mut count = 0u32;
 
-            for dy in -(radius as i32)..=(radius as i32) {
-                let ny = y as i32 + dy;
-
-                if ny < 0 || ny >= height as i32 {
+            for dy in -radius_i64..=radius_i64 {
+                let ny = y_i64 + dy;
+                if ny < 0 || ny >= height_i64 {
                     continue;
                 }
-
-                for dx in -(radius as i32)..=(radius as i32) {
-                    let nx = x as i32 + dx;
-
-                    if nx < 0 || nx >= width as i32 {
+                for dx in -radius_i64..=radius_i64 {
+                    let nx = x_i64 + dx;
+                    if nx < 0 || nx >= width_i64 {
                         continue;
                     }
-
-                    let idx = ((ny * width as i32 + nx) as usize) * BYTES_PER_PIXEL;
-
+                    let idx = ((ny * width_i64 + nx) as usize) * BYTES_PER_PIXEL;
                     sum_r += src[idx] as u32;
                     sum_g += src[idx + 1] as u32;
                     sum_b += src[idx + 2] as u32;
