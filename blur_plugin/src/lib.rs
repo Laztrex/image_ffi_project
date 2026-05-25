@@ -30,7 +30,6 @@ pub unsafe extern "C" fn process_image(
     rgba_data: *mut u8,
     params: *const std::os::raw::c_char,
 ) -> i32 {
-
     if rgba_data.is_null() {
         warn!("process_image: null pointer to rgba_data");
         return 1;
